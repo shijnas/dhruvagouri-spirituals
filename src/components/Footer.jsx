@@ -44,11 +44,16 @@ export default function Footer() {
           
           {/* Brand Col */}
           <div className="lg:col-span-2 pr-0 lg:pr-8">
-            <img 
-              src="/assets/logo_full.png" 
-              alt="DHRUVAGOURI SPIRITUALS" 
-              className="h-[52px] w-auto object-contain mb-4" 
-            />
+            <picture>
+              <source srcSet="/assets/logo_full.webp" type="image/webp" />
+              <img 
+                src="/assets/logo_full.png" 
+                alt="DHRUVAGOURI SPIRITUALS" 
+                className="h-[52px] w-auto object-contain mb-4" 
+                width="189"
+                height="52"
+              />
+            </picture>
             <p className="text-[12px] text-[#8F8372] leading-relaxed max-w-[360px]">
               Rooted in reverence for India's sacred traditions. We curating authentic devotional treasures to bring peace, spiritual focus, and sacred living into everyday homes.
             </p>

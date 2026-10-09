@@ -23,11 +23,16 @@ export default function Header({
         <div className="flex items-center min-w-[260px] md:min-w-[300px] h-[75px]">
           <a href="#" className="flex items-center gap-3.5 group">
             {/* Authentic Logo Emblem */}
-            <img 
-              src="/assets/logo_full.png" 
-              alt="DHRUVAGOURI SPIRITUALS - Authentic Indian Spiritual Traditions" 
-              className="h-[58px] w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
-            />
+            <picture>
+              <source srcSet="/assets/logo_full.webp" type="image/webp" />
+              <img 
+                src="/assets/logo_full.png" 
+                alt="DHRUVAGOURI SPIRITUALS - Authentic Indian Spiritual Traditions" 
+                className="h-[58px] w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+                width="211"
+                height="58"
+              />
+            </picture>
           </a>
         </div>
 

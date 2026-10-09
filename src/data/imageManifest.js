@@ -9,22 +9,24 @@ export const IMAGE_MANIFEST = {
     logoFull: {
       key: 'brand_logo_full',
       path: '/assets/logo_full.png',
-      naturalDimensions: { width: 620, height: 168 },
-      aspectRatio: '3.69:1',
+      webpPath: '/assets/logo_full.webp',
+      naturalDimensions: { width: 2400, height: 660 },
+      aspectRatio: '3.64:1',
       displayLocation: 'Header & Footer brand identity',
-      altText: 'DHRUVAGOURI SPIRITUALS - Authentic Indian Spiritual Traditions (with signature red bindi on the letter i)',
-      format: 'image/png',
-      compressionTarget: '< 55KB (Lossless PNG)'
+      altText: 'DHRUVAGOURI SPIRITUALS - Authentic Indian Spiritual Traditions (with connected D and signature red bindi on the letter i)',
+      format: 'image/png, image/webp',
+      compressionTarget: 'UHD HQ Lossless RGBA (Transparent Background)'
     },
     logoEmblem: {
       key: 'brand_logo_emblem',
       path: '/assets/logo_emblem.png',
-      naturalDimensions: { width: 99, height: 84 },
-      aspectRatio: '1.18:1',
+      webpPath: '/assets/logo_emblem.webp',
+      naturalDimensions: { width: 800, height: 800 },
+      aspectRatio: '1:1',
       displayLocation: 'Mobile navigation & Favicon mark',
-      altText: 'DhruvaGouri Sacred Kalash Emblem',
-      format: 'image/png',
-      compressionTarget: '< 15KB'
+      altText: 'DhruvaGouri Sacred DG Medallion Emblem',
+      format: 'image/png, image/webp',
+      compressionTarget: 'UHD HQ Lossless RGBA (Transparent Background)'
     }
   },
 
