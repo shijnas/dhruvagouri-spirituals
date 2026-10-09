@@ -25,7 +25,8 @@ dist-ssr
 
 # Temporary test crops & capture scripts
 diff_sections*
-*.png
+/*.png
+!public/assets/**
 take_screenshot.js
 capture_featured_section.js
 verify_checkpoints.py
