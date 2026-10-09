@@ -80,3 +80,263 @@ body {
 .font-cinzel-heading {
   font-family: 'Cinzel', serif;
 }
+
+/* ==========================================================================
+   DHRUVAGOURI SPIRITUALS — SIGNATURE SPIRITUAL GOLD GLOW & MOTION SYSTEM
+   ========================================================================== */
+
+/* Motion Tokens */
+:root {
+  --ease-spiritual: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-temple: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-hover: 240ms;
+  --duration-icon: 260ms;
+  --duration-logo-cycle: 5.5s;
+  --duration-ambient: 11s;
+}
+
+/* 1. DG Emblem Signature Animation Sequence (4-7s cycle, smooth natural breathing) */
+@keyframes spiritual-emblem-glow {
+  0% {
+    filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.6))
+            drop-shadow(0 0 0px rgba(212, 172, 76, 0));
+  }
+  30% {
+    filter: drop-shadow(0 3px 12px rgba(0, 0, 0, 0.5))
+            drop-shadow(0 0 10px rgba(212, 172, 76, 0.35))
+            drop-shadow(0 0 20px rgba(168, 120, 34, 0.2));
+  }
+  55% {
+    filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.45))
+            drop-shadow(0 0 16px rgba(241, 215, 137, 0.55))
+            drop-shadow(0 0 28px rgba(212, 172, 76, 0.35));
+  }
+  80% {
+    filter: drop-shadow(0 3px 12px rgba(0, 0, 0, 0.5))
+            drop-shadow(0 0 8px rgba(212, 172, 76, 0.25));
+  }
+  100% {
+    filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.6))
+            drop-shadow(0 0 0px rgba(212, 172, 76, 0));
+  }
+}
+
+/* Gentle highlight sweep moving across the emblem */
+@keyframes spiritual-highlight-sweep {
+  0%, 15% {
+    transform: translateX(-150%) skewX(-20deg);
+    opacity: 0;
+  }
+  35% {
+    opacity: 0.35;
+  }
+  55% {
+    transform: translateX(150%) skewX(-20deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(150%) skewX(-20deg);
+    opacity: 0;
+  }
+}
+
+/* Restrained wordmark shimmer appearing at occasional intervals */
+@keyframes spiritual-wordmark-shimmer {
+  0%, 35% {
+    transform: translateX(-160%) skewX(-15deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.28;
+  }
+  65% {
+    transform: translateX(160%) skewX(-15deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(160%) skewX(-15deg);
+    opacity: 0;
+  }
+}
+
+/* Soft golden aura breathing behind the emblem */
+@keyframes spiritual-aura-pulse {
+  0%, 100% {
+    opacity: 0.25;
+    transform: scale(0.96);
+  }
+  50% {
+    opacity: 0.55;
+    transform: scale(1.05);
+  }
+}
+
+/* Diya ambient background glow (calm, slow-moving temple light) */
+@keyframes diya-ambient-breathe {
+  0%, 100% {
+    opacity: 0.18;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.36;
+    transform: scale(1.06);
+  }
+}
+
+/* Subtle gold shimmer on headline accents */
+@keyframes golden-headline-shimmer {
+  0%, 100% {
+    filter: drop-shadow(0 0 2px rgba(229, 188, 92, 0.2));
+  }
+  50% {
+    filter: drop-shadow(0 0 10px rgba(241, 215, 137, 0.55))
+            drop-shadow(0 0 18px rgba(212, 172, 76, 0.3));
+  }
+}
+
+/* Divider golden pulse */
+@keyframes divider-gold-breathe {
+  0%, 100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.85;
+    filter: drop-shadow(0 0 4px rgba(229, 188, 92, 0.5));
+  }
+}
+
+/* Reusable Utility Classes */
+.animate-emblem-glow {
+  animation: spiritual-emblem-glow 5.5s var(--ease-spiritual) infinite;
+}
+
+.animate-emblem-shimmer {
+  animation: spiritual-highlight-sweep 5.5s var(--ease-spiritual) infinite;
+}
+
+.animate-wordmark-shimmer {
+  animation: spiritual-wordmark-shimmer 7.5s var(--ease-spiritual) infinite;
+}
+
+.animate-spiritual-aura {
+  animation: spiritual-aura-pulse 5.5s var(--ease-spiritual) infinite;
+}
+
+.animate-diya-glow {
+  animation: diya-ambient-breathe 10s var(--ease-temple) infinite;
+}
+
+.animate-gold-headline {
+  animation: golden-headline-shimmer 4.5s var(--ease-spiritual) infinite;
+}
+
+.animate-divider-glow {
+  animation: divider-gold-breathe 6s var(--ease-spiritual) infinite;
+}
+
+/* Navigation Links — Elegant Gold Underline Hover */
+.nav-link-spiritual {
+  position: relative;
+  transition: color var(--duration-hover) var(--ease-temple);
+}
+
+.nav-link-spiritual::after {
+  content: '';
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  width: 0;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, #E5BC5C 30%, #F1D789 50%, #E5BC5C 70%, transparent);
+  box-shadow: 0 0 6px rgba(229, 188, 92, 0.6);
+  border-radius: 9999px;
+  transition: width var(--duration-hover) var(--ease-spiritual),
+              left var(--duration-hover) var(--ease-spiritual);
+}
+
+.nav-link-spiritual:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Search Input Focus Treatment */
+.input-gold-focus:focus {
+  outline: none;
+  border-color: #E5BC5C;
+  box-shadow: 0 0 14px rgba(212, 172, 76, 0.35), inset 0 0 6px rgba(212, 172, 76, 0.12);
+}
+
+/* Category Card Interactions */
+.card-category-spiritual {
+  transition: transform var(--duration-hover) var(--ease-spiritual),
+              border-color var(--duration-hover) var(--ease-spiritual),
+              box-shadow var(--duration-hover) var(--ease-spiritual);
+}
+
+.card-category-spiritual:hover {
+  border-color: #C69A38;
+  box-shadow: 0 6px 20px rgba(198, 154, 56, 0.18), 0 1px 3px rgba(0, 0, 0, 0.04);
+  transform: translateY(-2px);
+}
+
+/* Product Card Interactions */
+.card-product-spiritual {
+  transition: transform var(--duration-hover) var(--ease-spiritual),
+              border-color var(--duration-hover) var(--ease-spiritual),
+              box-shadow var(--duration-hover) var(--ease-spiritual);
+}
+
+.card-product-spiritual:hover {
+  border-color: rgba(198, 154, 56, 0.45);
+  box-shadow: 0 8px 26px rgba(198, 154, 56, 0.14), 0 2px 6px rgba(0, 0, 0, 0.06);
+  transform: translateY(-3px);
+}
+
+/* Interactive Button Hover Glow */
+.btn-gold-glow {
+  transition: all var(--duration-hover) var(--ease-spiritual);
+}
+
+.btn-gold-glow:hover {
+  box-shadow: 0 0 18px rgba(229, 188, 92, 0.45), 0 4px 12px rgba(198, 154, 56, 0.3);
+  filter: brightness(1.05);
+}
+
+.btn-gold-glow:active {
+  transform: scale(0.98);
+}
+
+.btn-outline-gold {
+  transition: all var(--duration-hover) var(--ease-spiritual);
+}
+
+.btn-outline-gold:hover {
+  border-color: #E5BC5C;
+  background-color: rgba(198, 154, 56, 0.12);
+  box-shadow: 0 0 14px rgba(198, 154, 56, 0.28);
+}
+
+.btn-outline-gold:active {
+  transform: scale(0.98);
+}
+
+/* Accessibility: Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-emblem-glow,
+  .animate-emblem-shimmer,
+  .animate-wordmark-shimmer,
+  .animate-spiritual-aura,
+  .animate-diya-glow,
+  .animate-gold-headline,
+  .animate-divider-glow {
+    animation: none !important;
+  }
+}

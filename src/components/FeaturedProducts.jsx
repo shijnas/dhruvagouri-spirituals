@@ -9,10 +9,11 @@ export default function FeaturedProducts({
   onQuickView
 }) {
   return (
-    <section id="featured-products" className="w-full bg-[#0A0806] border-t border-[#231A12] pt-6 pb-16 relative">
-      {/* Background subtle cinematic architectural atmosphere */}
+    <section id="featured-products" className="w-full bg-[#0A0806] border-t border-[#231A12] pt-6 pb-16 relative overflow-hidden">
+      {/* Background subtle cinematic architectural atmosphere with diya glow */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#130E09] via-[#0A0806] to-[#060504] opacity-95 pointer-events-none" />
-      <div className="absolute top-0 right-0 w-[420px] h-[420px] bg-[#C69A38]/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[420px] h-[420px] bg-[#C69A38]/5 rounded-full blur-3xl pointer-events-none animate-diya-glow" />
+      <div className="absolute bottom-10 left-1/4 w-[500px] h-[280px] bg-[#C69A38]/4 rounded-full blur-[130px] pointer-events-none animate-diya-glow" style={{ animationDelay: '3s' }} />
 
       <div className="relative max-w-[1536px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-14">
         
@@ -21,7 +22,7 @@ export default function FeaturedProducts({
           <div>
             {/* Eyebrow */}
             <div className="flex items-center space-x-2 text-[#C69A38] mb-1">
-              <span className="w-4 h-[1px] bg-[#C69A38]/60" />
+              <span className="w-4 h-[1px] bg-[#C69A38]/60 animate-divider-glow" />
               <span className="text-[11px] font-sans font-semibold tracking-[0.22em] uppercase text-[#C69A38]">
                 THE COLLECTION
               </span>
@@ -30,7 +31,7 @@ export default function FeaturedProducts({
 
             {/* Main Heading */}
             <h2 className="font-serif text-[28px] sm:text-[31px] leading-tight text-[#F7F2E7] font-normal tracking-[-0.01em]">
-              Sacred Essentials, Thoughtfully Chosen.
+              Sacred Essentials, <span className="text-[#E5BC5C] animate-gold-headline inline-block">Thoughtfully Chosen.</span>
             </h2>
           </div>
 
@@ -53,14 +54,14 @@ export default function FeaturedProducts({
               return (
                 <div
                   key={prod.id}
-                  className="group bg-[#FAF5EB] border border-[#E1D3BA] rounded-[4px] overflow-hidden flex flex-col justify-between shadow-lg transition-all duration-300 hover:shadow-2xl hover:border-[#C69A38]/70"
+                  className="group bg-[#FAF5EB] border border-[#E1D3BA] rounded-[4px] overflow-hidden flex flex-col justify-between shadow-md card-product-spiritual"
                 >
                   {/* PRODUCT IMAGE FRAME — 1:1 square, occupies entire container, no empty space, no nested borders */}
                   <div className="w-full aspect-square bg-[#FAF5EB] relative overflow-hidden flex items-center justify-center">
                     
                     {/* Genuine Product Badge */}
                     {prod.badge && (
-                      <span className="absolute top-2.5 left-2.5 z-20 px-2.5 py-0.5 rounded-[2px] bg-[#E5BC5C] text-[#141009] text-[9.5px] font-sans font-bold uppercase tracking-wider shadow-sm">
+                      <span className="absolute top-2.5 left-2.5 z-20 px-2.5 py-0.5 rounded-[2px] bg-gradient-to-r from-[#D4A947] via-[#F2D78C] to-[#D4A947] text-[#141009] text-[9.5px] font-sans font-bold uppercase tracking-wider shadow-sm border border-[#E5BC5C]/40">
                         {prod.badge}
                       </span>
                     )}
@@ -71,13 +72,13 @@ export default function FeaturedProducts({
                         e.stopPropagation();
                         onToggleWishlist(prod.id);
                       }}
-                      className="absolute top-2.5 right-2.5 z-20 w-[28px] h-[28px] rounded-full bg-[#FAF5EB]/90 hover:bg-white text-[#4A4033] hover:text-[#C69A38] border border-[#D5C4A8] flex items-center justify-center transition-all duration-200 cursor-pointer shadow-sm"
+                      className="absolute top-2.5 right-2.5 z-20 w-[28px] h-[28px] rounded-full bg-[#FAF5EB]/90 hover:bg-white text-[#4A4033] hover:text-[#C69A38] border border-[#D5C4A8] hover:border-[#C69A38] flex items-center justify-center transition-all duration-200 cursor-pointer shadow-sm hover:shadow-[0_0_10px_rgba(212,172,76,0.35)] active:scale-90"
                       aria-label={isWishlisted ? "Remove from Wishlist" : "Add to Wishlist"}
                       title={isWishlisted ? "In Wishlist" : "Add to Wishlist"}
                     >
                       <Heart
                         size={14}
-                        className={isWishlisted ? "text-[#C69A38] fill-[#C69A38]" : "text-[#554A3B]"}
+                        className={isWishlisted ? "text-[#C69A38] fill-[#C69A38] drop-shadow-[0_0_6px_rgba(229,188,92,0.6)]" : "text-[#554A3B] transition-colors"}
                       />
                     </button>
 
@@ -87,16 +88,16 @@ export default function FeaturedProducts({
                       <img
                         src={prod.image}
                         alt={prod.name}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                         loading="eager"
                       />
                     </picture>
 
                     {/* Quick View Hover overlay */}
-                    <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-10 pointer-events-none group-hover:pointer-events-auto">
+                    <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center z-10 pointer-events-none group-hover:pointer-events-auto">
                       <button
                         onClick={() => onQuickView(prod)}
-                        className="px-3.5 py-1.5 bg-[#FAF5EB] text-[#1C160F] text-[11px] font-sans font-semibold rounded shadow hover:bg-white flex items-center gap-1.5 cursor-pointer transition-colors"
+                        className="px-3.5 py-1.5 bg-[#FAF5EB] text-[#1C160F] text-[11px] font-sans font-semibold rounded shadow-md hover:bg-white hover:text-[#C69A38] hover:shadow-[0_0_12px_rgba(212,172,76,0.4)] flex items-center gap-1.5 cursor-pointer transition-all duration-200 active:scale-95"
                       >
                         <Eye size={13} />
                         <span>Quick View</span>
@@ -139,7 +140,7 @@ export default function FeaturedProducts({
                       {/* Add to Bag Button */}
                       <button
                         onClick={() => onAddToCart(prod)}
-                        className="w-[28px] h-[28px] rounded bg-[#1C1610] hover:bg-[#C69A38] text-[#F8F4EA] hover:text-[#110E0B] flex items-center justify-center transition-colors cursor-pointer"
+                        className="w-[28px] h-[28px] rounded bg-[#1C1610] hover:bg-[#C69A38] text-[#F8F4EA] hover:text-[#110E0B] flex items-center justify-center transition-all duration-200 cursor-pointer shadow hover:shadow-[0_0_12px_rgba(212,172,76,0.5)] active:scale-95"
                         title="Add to Bag"
                         aria-label={`Add ${prod.name} to bag`}
                       >

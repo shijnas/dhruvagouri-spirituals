@@ -79,17 +79,17 @@ export default function BrandPrinciples() {
       <div className="max-w-[1536px] w-full h-full mx-auto px-6 sm:px-12 lg:px-16 flex items-center">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 items-center w-full h-full">
           {items.map((item, index) => (
-            <div key={item.id} className="relative flex items-center justify-center lg:justify-start py-1 lg:py-0 px-3 lg:px-5">
+            <div key={item.id} className="group relative flex items-center justify-center lg:justify-start py-1 lg:py-0 px-3 lg:px-5 cursor-default">
               {/* Content Group (Icon + 2-line text block) */}
               <div className="flex items-center space-x-3.5">
-                {/* Gold line icon (42–50px) */}
-                <div className="flex-shrink-0 flex items-center justify-center">
+                {/* Gold line icon (42–50px) with subtle golden illumination on hover */}
+                <div className="flex-shrink-0 flex items-center justify-center transition-all duration-300 group-hover:drop-shadow-[0_0_10px_rgba(212,172,76,0.5)] group-hover:scale-105">
                   {item.icon}
                 </div>
 
-                {/* Text Block */}
+                {/* Text Block - kept static and easily readable */}
                 <div className="flex flex-col justify-center">
-                  <h3 className="font-serif text-[15px] font-semibold text-[#221D16] tracking-wide leading-tight">
+                  <h3 className="font-serif text-[15px] font-semibold text-[#221D16] tracking-wide leading-tight group-hover:text-[#18120B] transition-colors">
                     {item.title}
                   </h3>
                   <p className="text-[12px] text-[#6E6352] font-sans font-normal leading-[16px] mt-0.5">
@@ -98,9 +98,9 @@ export default function BrandPrinciples() {
                 </div>
               </div>
 
-              {/* Fine vertical gold separator between groups (1px wide, 38px tall) */}
+              {/* Fine vertical gold separator with soft breathing highlight */}
               {index < items.length - 1 && (
-                <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-[38px] bg-[#DFCDB1]" />
+                <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-[38px] bg-[#DFCDB1] animate-divider-glow" />
               )}
             </div>
           ))}

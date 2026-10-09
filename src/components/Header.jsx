@@ -20,19 +20,44 @@ export default function Header({
       <div className="max-w-[1536px] h-full mx-auto px-6 sm:px-10 lg:px-16 flex items-center justify-between">
         
         {/* LEFT BRAND AREA: x ≈ 65px, width ≈ 300px */}
-        <div className="flex items-center min-w-[260px] md:min-w-[300px] h-[75px]">
-          <a href="#" className="flex items-center gap-3.5 group">
-            {/* Authentic Logo Emblem */}
-            <picture>
-              <source srcSet="/assets/logo_full.webp" type="image/webp" />
-              <img 
-                src="/assets/logo_full.png" 
-                alt="DHRUVAGOURI SPIRITUALS - Authentic Indian Spiritual Traditions" 
-                className="h-[58px] w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
-                width="211"
-                height="58"
-              />
-            </picture>
+        <div className="flex items-center min-w-[260px] md:min-w-[320px] h-[75px]">
+          <a href="#" className="flex items-center gap-3 group relative" aria-label="DHRUVAGOURI SPIRITUALS">
+            {/* DG Emblem with Signature Spiritual Gold Glow & Sweep Highlight */}
+            <div className="relative flex items-center justify-center flex-shrink-0">
+              {/* Soft spiritual breathing golden aura */}
+              <div className="absolute inset-0 -m-1.5 rounded-full bg-[radial-gradient(circle,rgba(212,172,76,0.35)_0%,rgba(168,120,34,0.15)_55%,transparent_75%)] animate-spiritual-aura pointer-events-none" />
+              
+              <div className="relative overflow-hidden rounded-full animate-emblem-glow">
+                <picture>
+                  <source srcSet="/assets/logo_emblem.webp" type="image/webp" />
+                  <img 
+                    src="/assets/logo_emblem.png" 
+                    alt="DG Sacred Emblem" 
+                    className="h-[58px] sm:h-[62px] w-auto object-contain transition-transform duration-300 group-hover:scale-[1.03]"
+                    width="62"
+                    height="62"
+                  />
+                </picture>
+                {/* Gentle highlight sweep moving across the monogram */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/20 to-transparent -translate-x-[150%] animate-emblem-shimmer pointer-events-none" />
+              </div>
+            </div>
+
+            {/* DHRUVAGOURI Wordmark with matching restrained occasional gold shimmer */}
+            <div className="relative flex items-center overflow-hidden">
+              <picture>
+                <source srcSet="/assets/logo_wordmark.webp" type="image/webp" />
+                <img 
+                  src="/assets/logo_wordmark.png" 
+                  alt="DHRUVAGOURI SPIRITUALS" 
+                  className="h-[46px] sm:h-[50px] w-auto object-contain transition-opacity duration-300"
+                  width="178"
+                  height="50"
+                />
+              </picture>
+              {/* Occasional subtle gold shimmer sweep */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#F1D789]/20 to-transparent -translate-x-[160%] animate-wordmark-shimmer pointer-events-none" />
+            </div>
           </a>
         </div>
 
@@ -51,9 +76,9 @@ export default function Header({
               >
                 <button
                   onClick={() => onSelectNav?.(link.name)}
-                  className={`flex items-center gap-1 transition-colors duration-200 cursor-pointer ${
+                  className={`flex items-center gap-1 nav-link-spiritual cursor-pointer ${
                     isActive 
-                      ? 'text-[#F8F4EA] font-semibold' 
+                      ? 'text-[#F8F4EA] font-semibold drop-shadow-[0_0_8px_rgba(229,188,92,0.4)]' 
                       : 'text-[#E0D8C8] hover:text-[#E5BC5C]'
                   }`}
                 >
@@ -63,9 +88,9 @@ export default function Header({
                   )}
                 </button>
 
-                {/* Understated gold active indicator visible in reference screenshot */}
+                {/* Understated gold active indicator with soft glow */}
                 {isActive && (
-                  <span className="absolute bottom-[20px] left-0 right-0 h-[1.5px] bg-[#C69A38] rounded-full shadow-[0_0_6px_rgba(198,154,56,0.6)]" />
+                  <span className="absolute bottom-[20px] left-0 right-0 h-[1.5px] bg-[#C69A38] rounded-full shadow-[0_0_8px_rgba(229,188,92,0.7)]" />
                 )}
 
                 {/* Dropdown Menu */}
@@ -89,21 +114,21 @@ export default function Header({
 
         {/* RIGHT CONTROLS: Search, Account, Wishlist, Shopping Bag */}
         <div className="flex items-center space-x-4 lg:space-x-5">
-          {/* Search Input Box (desktop width ≈ 228px, height ≈ 37px, rounded ≈ 22px) */}
+          {/* Search Input Box */}
           <div 
             onClick={onOpenSearch}
-            className="hidden lg:flex items-center justify-between w-[228px] h-[37px] px-3.5 rounded-full bg-[#161411] border border-[#3A3327] hover:border-[#C69A38]/60 transition-colors cursor-pointer group"
+            className="hidden lg:flex items-center justify-between w-[228px] h-[37px] px-3.5 rounded-full bg-[#161411] border border-[#3A3327] hover:border-[#E5BC5C]/70 hover:shadow-[0_0_12px_rgba(212,172,76,0.25)] transition-all duration-200 cursor-pointer group"
           >
             <span className="text-[12px] font-sans text-[#786F62] group-hover:text-[#A89D8B] transition-colors">
               Search for products...
             </span>
-            <Search size={15} className="text-[#8C806F] group-hover:text-[#E5BC5C] transition-colors" />
+            <Search size={15} className="text-[#8C806F] group-hover:text-[#E5BC5C] group-hover:drop-shadow-[0_0_6px_rgba(212,172,76,0.4)] transition-all duration-200" />
           </div>
 
           {/* Search Icon button for tablet/mobile */}
           <button 
             onClick={onOpenSearch} 
-            className="lg:hidden p-2 text-[#DDD3C2] hover:text-[#E5BC5C] transition-colors cursor-pointer"
+            className="lg:hidden p-2 text-[#DDD3C2] hover:text-[#E5BC5C] hover:drop-shadow-[0_0_6px_rgba(212,172,76,0.4)] transition-all duration-200 cursor-pointer"
             aria-label="Search"
           >
             <Search size={20} strokeWidth={1.75} />
@@ -112,7 +137,7 @@ export default function Header({
           {/* Account Icon */}
           <button 
             onClick={onOpenAuth}
-            className="p-1.5 text-[#E6DECة] text-[#DDD3C2] hover:text-[#E5BC5C] transition-colors cursor-pointer relative"
+            className="p-1.5 text-[#DDD3C2] hover:text-[#E5BC5C] hover:drop-shadow-[0_0_6px_rgba(212,172,76,0.4)] transition-all duration-200 cursor-pointer relative"
             aria-label="Account"
           >
             <User size={21} strokeWidth={1.65} />
@@ -121,25 +146,25 @@ export default function Header({
           {/* Wishlist Heart Icon */}
           <button 
             onClick={onOpenWishlist}
-            className="p-1.5 text-[#DDD3C2] hover:text-[#E5BC5C] transition-colors cursor-pointer relative"
+            className="p-1.5 text-[#DDD3C2] hover:text-[#E5BC5C] hover:drop-shadow-[0_0_6px_rgba(212,172,76,0.4)] transition-all duration-200 cursor-pointer relative"
             aria-label="Wishlist"
           >
-            <Heart size={21} strokeWidth={1.65} className={wishlistCount > 0 ? "text-[#E5BC5C] fill-[#E5BC5C]/20" : ""} />
+            <Heart size={21} strokeWidth={1.65} className={wishlistCount > 0 ? "text-[#E5BC5C] fill-[#E5BC5C]/20 drop-shadow-[0_0_6px_rgba(229,188,92,0.5)]" : "transition-colors"} />
             {wishlistCount > 0 && (
-              <span className="absolute -top-1 -right-1 w-[15px] h-[15px] bg-[#C69A38] text-[#080807] text-[9px] font-bold rounded-full flex items-center justify-center">
+              <span className="absolute -top-1 -right-1 w-[15px] h-[15px] bg-[#C69A38] text-[#080807] text-[9px] font-bold rounded-full flex items-center justify-center shadow-[0_0_6px_rgba(198,154,56,0.5)]">
                 {wishlistCount}
               </span>
             )}
           </button>
 
-          {/* Shopping Bag Icon with item-count badge (size ≈ 16-18px) */}
+          {/* Shopping Bag Icon */}
           <button 
             onClick={onOpenCart}
-            className="p-1.5 text-[#DDD3C2] hover:text-[#E5BC5C] transition-colors cursor-pointer relative"
+            className="p-1.5 text-[#DDD3C2] hover:text-[#E5BC5C] hover:drop-shadow-[0_0_6px_rgba(212,172,76,0.4)] transition-all duration-200 cursor-pointer relative"
             aria-label="Shopping Bag"
           >
             <ShoppingBag size={21} strokeWidth={1.65} />
-            <span className="absolute -top-1 -right-1.5 min-w-[17px] h-[17px] bg-[#C69A38] text-[#080807] text-[10px] font-bold rounded-full flex items-center justify-center px-0.5 shadow-sm">
+            <span className="absolute -top-1 -right-1.5 min-w-[17px] h-[17px] bg-[#C69A38] text-[#080807] text-[10px] font-bold rounded-full flex items-center justify-center px-0.5 shadow-[0_0_6px_rgba(198,154,56,0.5)]">
               {cartCount}
             </span>
           </button>

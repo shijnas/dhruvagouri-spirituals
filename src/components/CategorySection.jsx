@@ -50,7 +50,8 @@ export default function CategorySection({ onSelectCategory }) {
               <div
                 key={cat.id}
                 onClick={() => onSelectCategory?.(cat)}
-                className="group w-[137px] sm:w-[138px] h-[164px] bg-[#FAF6EE] border border-[#DFCDB2] rounded-[3px] overflow-hidden flex flex-col justify-between shadow-[0_1px_4px_rgba(0,0,0,0.03)] hover:border-[#C69A38] hover:shadow-md transition-all duration-200 cursor-pointer"
+                tabIndex={0}
+                className="group card-category-spiritual w-[137px] sm:w-[138px] h-[164px] bg-[#FAF6EE] border border-[#DFCDB2] rounded-[3px] overflow-hidden flex flex-col justify-between shadow-[0_1px_4px_rgba(0,0,0,0.03)] cursor-pointer focus:outline-none focus:ring-1 focus:ring-[#C69A38]"
               >
                 {/* Product Image Area (~116px tall) */}
                 <div className="w-full h-[116px] overflow-hidden bg-[#241F1A] relative flex-shrink-0">
@@ -59,22 +60,22 @@ export default function CategorySection({ onSelectCategory }) {
                     <img
                       src={cat.image}
                       alt={cat.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-350 ease-out"
                       loading="eager"
                     />
                   </picture>
-                  <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors" />
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300" />
                 </div>
 
                 {/* Caption Area (~48px tall) */}
-                <div className="w-full h-[48px] px-2.5 py-1.5 flex items-center justify-between bg-[#F8F4EA] border-t border-[#E8DEC9]">
-                  <span className="font-serif text-[11.5px] leading-[13px] text-[#221B14] font-medium tracking-wide line-clamp-2 pr-1">
+                <div className="w-full h-[48px] px-2.5 py-1.5 flex items-center justify-between bg-[#F8F4EA] border-t border-[#E8DEC9] group-hover:bg-[#FCF9F2] transition-colors">
+                  <span className="font-serif text-[11.5px] leading-[13px] text-[#221B14] font-medium tracking-wide line-clamp-2 pr-1 group-hover:text-[#0C0A07] transition-colors">
                     {cat.name}
                   </span>
                   
-                  {/* Circular Gold Outlined Arrow */}
-                  <span className="flex-shrink-0 w-[18px] h-[18px] rounded-full border border-[#C69A38]/70 text-[#C69A38] flex items-center justify-center group-hover:bg-[#C69A38] group-hover:text-[#0C0A07] transition-all duration-200">
-                    <ChevronRight size={11} strokeWidth={2.2} />
+                  {/* Circular Gold Outlined Arrow with hover glow and motion */}
+                  <span className="flex-shrink-0 w-[18px] h-[18px] rounded-full border border-[#C69A38]/70 text-[#C69A38] flex items-center justify-center transition-all duration-250 group-hover:bg-[#C69A38] group-hover:text-[#0C0A07] group-hover:border-[#E5BC5C] group-hover:shadow-[0_0_8px_rgba(212,172,76,0.45)]">
+                    <ChevronRight size={11} strokeWidth={2.2} className="transition-transform duration-250 group-hover:translate-x-[1.5px]" />
                   </span>
                 </div>
               </div>
