@@ -82,12 +82,15 @@ export default function FeaturedProducts({
                     </button>
 
                     {/* Clean Product Photograph — 100% width and height, object-cover */}
-                    <img
-                      src={prod.image}
-                      alt={prod.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      loading="eager"
-                    />
+                    <picture className="w-full h-full block">
+                      <source type="image/webp" srcSet={prod.image.replace(/\.(jpg|jpeg|png)$/, '.webp')} />
+                      <img
+                        src={prod.image}
+                        alt={prod.name}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        loading="eager"
+                      />
+                    </picture>
 
                     {/* Quick View Hover overlay */}
                     <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-10 pointer-events-none group-hover:pointer-events-auto">

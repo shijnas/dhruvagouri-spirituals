@@ -54,12 +54,15 @@ export default function CategorySection({ onSelectCategory }) {
               >
                 {/* Product Image Area (~116px tall) */}
                 <div className="w-full h-[116px] overflow-hidden bg-[#241F1A] relative flex-shrink-0">
-                  <img
-                    src={cat.image}
-                    alt={cat.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    loading="eager"
-                  />
+                  <picture className="w-full h-full block">
+                    <source type="image/webp" srcSet={cat.image.replace(/\.(jpg|jpeg|png)$/, '.webp')} />
+                    <img
+                      src={cat.image}
+                      alt={cat.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="eager"
+                    />
+                  </picture>
                   <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors" />
                 </div>
 

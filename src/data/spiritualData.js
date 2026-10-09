@@ -68,70 +68,70 @@ export const CATEGORIES = [
   {
     id: 1,
     name: 'Rudraksha',
-    image: '/assets/categories/cat_1_rudraksha.png',
+    image: '/assets/categories/cat_1_rudraksha.jpg',
     href: '#rudraksha',
     description: 'Authentic Himalayan Rudraksha beads selected for sacred alignment.'
   },
   {
     id: 2,
     name: 'Sacred Malas',
-    image: '/assets/categories/cat_2_sacred_malas.png',
+    image: '/assets/categories/cat_2_sacred_malas.jpg',
     href: '#sacred-malas',
     description: 'Traditional 108-bead japa malas hand-knotted on natural cords.'
   },
   {
     id: 3,
     name: 'Spiritual Clothing',
-    image: '/assets/categories/cat_3_spiritual_clothing.png',
+    image: '/assets/categories/cat_3_spiritual_clothing.jpg',
     href: '#spiritual-clothing',
     description: 'Handwoven natural silk & cotton dhotis, kurtas, and angavastrams.'
   },
   {
     id: 4,
     name: 'Puja Essentials',
-    image: '/assets/categories/cat_4_puja_essentials.png',
+    image: '/assets/categories/cat_4_puja_essentials.jpg',
     href: '#puja-essentials',
     description: 'Handcrafted brass lamps, kalash, thalis, and ritual vessels.'
   },
   {
     id: 5,
     name: 'Idols',
-    image: '/assets/categories/cat_5_idols.png',
+    image: '/assets/categories/cat_5_idols.jpg',
     href: '#idols',
     description: 'Vedic brass, bronze, and stone deities sculpted with traditional iconography.'
   },
   {
     id: 6,
     name: 'Yantras',
-    image: '/assets/categories/cat_6_yantras.png',
+    image: '/assets/categories/cat_6_yantras.jpg',
     href: '#yantras',
     description: 'Sacred geometric copper & brass yantras etched according to ancient shastras.'
   },
   {
     id: 7,
     name: 'Incense & Dhoop',
-    image: '/assets/categories/cat_7_incense_dhoop.png',
+    image: '/assets/categories/cat_7_incense_dhoop.jpg',
     href: '#incense-dhoop',
     description: 'Pure botanical resin, temple agarbatti, and natural herbal sambrani.'
   },
   {
     id: 8,
     name: 'Temple Accessories',
-    image: '/assets/categories/cat_8_temple_accessories.png',
+    image: '/assets/categories/cat_8_temple_accessories.jpg',
     href: '#temple-accessories',
     description: 'Traditional temple bells, conch shells, chamars, and sacred ornamentation.'
   },
   {
     id: 9,
     name: 'Spiritual Books',
-    image: '/assets/categories/cat_9_spiritual_books.png',
+    image: '/assets/categories/cat_9_spiritual_books.jpg',
     href: '#spiritual-books',
     description: 'Timeless Vedic commentaries, Upanishads, Bhagavad Gita, and sacred hymns.'
   },
   {
     id: 10,
     name: 'Ayurvedic & Traditional Wellness',
-    image: '/assets/categories/cat_10_ayurvedic_wellness.png',
+    image: '/assets/categories/cat_10_ayurvedic_wellness.jpg',
     href: '#ayurvedic-wellness',
     description: 'Pure herbs, brass pestles, sacred oils, and traditional rasayanas.'
   },

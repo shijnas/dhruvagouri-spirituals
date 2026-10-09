@@ -16,7 +16,7 @@ export default function AnnouncementBar({ onOpenModal }) {
       </div>
 
       {/* Right links and ornament */}
-      <div className="flex items-center space-x-3 text-[11px] text-[#C4A053] pr-4 md:pr-10 font-sans">
+      <div className="hidden sm:flex items-center space-x-3 text-[11px] text-[#C4A053] pr-4 md:pr-10 font-sans">
         <a href="#about" onClick={(e) => { e.preventDefault(); onOpenModal?.('About Us'); }} className="hover:text-[#F2D78C] transition-colors">About Us</a>
         <span className="text-[#C69A38]/40">|</span>
         <a href="#contact" onClick={(e) => { e.preventDefault(); onOpenModal?.('Contact'); }} className="hover:text-[#F2D78C] transition-colors">Contact</a>

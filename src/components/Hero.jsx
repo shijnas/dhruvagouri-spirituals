@@ -43,22 +43,22 @@ export default function Hero({ onExploreClick, onHeritageClick }) {
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
-    <section className="relative w-full h-[360px] bg-[#0c0a07] overflow-hidden select-none border-b border-[#251d14]">
+    <section className="relative w-full min-h-[360px] h-auto py-8 sm:py-0 sm:h-[360px] bg-[#0c0a07] overflow-hidden select-none border-b border-[#251d14]">
       {/* Background Cinematic Spiritual Still-Life */}
       <div 
         className="absolute inset-0 w-full h-full bg-cover bg-right lg:bg-center"
         style={{
-          backgroundImage: "url('/assets/hero_bg.png')",
+          backgroundImage: "url('/assets/hero_bg_2x.jpg')",
           backgroundPosition: 'right center',
           backgroundRepeat: 'no-repeat',
         }}
       >
         {/* Soft vignette gradient for perfect text contrast on left */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#080807] via-[#080807]/85 to-transparent w-full md:w-[62%]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#080807] via-[#080807]/90 to-transparent w-full md:w-[62%]" />
       </div>
 
-      {/* Vertical Slide Indicators (Far-left edge at x ≈ 38px) */}
-      <div className="absolute left-[20px] lg:left-[38px] top-1/2 -translate-y-1/2 z-30 flex flex-col items-center space-y-3">
+      {/* Vertical Slide Indicators (Far-left edge at x ≈ 38px, visible on md+) */}
+      <div className="hidden md:flex absolute left-[20px] lg:left-[38px] top-1/2 -translate-y-1/2 z-30 flex-col items-center space-y-3">
         {slides.map((_, idx) => (
           <button
             key={idx}
@@ -93,7 +93,7 @@ export default function Hero({ onExploreClick, onHeritageClick }) {
           </div>
 
           {/* Main Headline (48–50px, line-height 0.98–1.05, Cormorant Garamond) */}
-          <h1 className="font-serif text-[45px] sm:text-[48px] lg:text-[49px] leading-[1.01] tracking-[-0.01em] text-[#F8F4EA] mb-3">
+          <h1 className="font-serif text-[34px] sm:text-[48px] lg:text-[49px] leading-[1.04] sm:leading-[1.01] tracking-[-0.01em] text-[#F8F4EA] mb-3">
             <span>{slide.line1Prefix}</span>
             <span className="text-[#E5BC5C] font-normal">{slide.line1Highlight}</span>
             <br />
