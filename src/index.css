@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-obsidian: #080807;
+  --color-deep-warm-black: #11100D;
+  --color-antique-gold: #C69A38;
+  --color-primary-gold: #E5BC5C;
+  --color-pale-gold: #F2D78C;
+  --color-warm-ivory: #F8F4EA;
+  --color-cream-bg: #EFE6D3;
+  --color-dark-brown: #47331D;
+  --color-charcoal-text: #292720;
+  --color-muted-taupe: #827968;
+  --color-light-borders: #E4D9C6;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-obsidian);
+  color: var(--color-warm-ivory);
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Gold Gradients & Textures */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #F2D78C 0%, #E5BC5C 50%, #C69A38 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-btn-gradient {
+  background: linear-gradient(180deg, #E5BC5C 0%, #D4A947 50%, #C29532 100%);
+  box-shadow: 0 2px 8px rgba(198, 154, 56, 0.25);
+}
+
+.gold-btn-gradient:hover {
+  background: linear-gradient(180deg, #F2D78C 0%, #E5BC5C 50%, #D4A947 100%);
+  box-shadow: 0 4px 14px rgba(198, 154, 56, 0.4);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #11100D;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3a3224;
+  border-radius: 4px;
+  border: 1px solid rgba(198, 154, 56, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C69A38;
+}
+
+/* Elegant borders */
+.gold-border-subtle {
+  border-color: rgba(198, 154, 56, 0.3);
+}
+
+.gold-border-glow {
+  border-color: rgba(229, 188, 92, 0.6);
+}
+
+/* Typography styles */
+.font-serif-heading {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-cinzel-heading {
+  font-family: 'Cinzel', serif;
+}
