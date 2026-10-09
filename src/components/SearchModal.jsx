@@ -1,9 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Search, X, ArrowRight, Tag } from 'lucide-react';
 import { FEATURED_PRODUCTS, CATEGORIES } from '../data/spiritualData';
 
 export default function SearchModal({ isOpen, onClose, onSelectProduct, onSelectCategory }) {
   const [query, setQuery] = useState('');
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
 
   if (!isOpen) return null;
 
@@ -20,7 +29,7 @@ export default function SearchModal({ isOpen, onClose, onSelectProduct, onSelect
     : CATEGORIES.slice(0, 5);
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto select-none flex items-start justify-center pt-20 px-4">
+    <div className="fixed inset-0 z-50 overflow-y-auto flex items-start justify-center pt-20 px-4">
       {/* Backdrop */}
       <div 
         className="fixed inset-0 bg-black/85 backdrop-blur-md transition-opacity"

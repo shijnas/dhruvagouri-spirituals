@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { X, Trash2, ArrowRight, ShieldCheck } from 'lucide-react';
 
 export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQty, onRemoveItem }) {
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
+
   if (!isOpen) return null;
 
   const subtotal = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
   return (
-    <div className="fixed inset-0 z-50 overflow-hidden select-none">
+    <div className="fixed inset-0 z-50 overflow-hidden">
       {/* Backdrop */}
       <div 
         className="absolute inset-0 bg-black/75 backdrop-blur-sm transition-opacity"

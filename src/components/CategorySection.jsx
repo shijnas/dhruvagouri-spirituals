@@ -4,7 +4,7 @@ import { CATEGORIES } from '../data/spiritualData';
 
 export default function CategorySection({ onSelectCategory }) {
   return (
-    <section className="w-full h-[283px] bg-[#F5EFE1] relative select-none border-b border-[#E1D3BA] overflow-hidden">
+    <section className="w-full min-h-[283px] py-3 bg-[#F5EFE1] relative border-b border-[#E1D3BA]">
       {/* Background subtle luxury corner linework */}
       <div className="absolute top-0 left-0 w-32 h-32 opacity-10 pointer-events-none bg-[radial-gradient(#C69A38_1px,transparent_1px)] [background-size:16px_16px]" />
       <div className="absolute top-0 right-0 w-32 h-32 opacity-10 pointer-events-none bg-[radial-gradient(#C69A38_1px,transparent_1px)] [background-size:16px_16px]" />

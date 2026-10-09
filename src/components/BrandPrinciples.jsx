@@ -66,7 +66,7 @@ export default function BrandPrinciples() {
   ];
 
   return (
-    <section className="w-full h-[94px] bg-[#F7F2E7] border-b border-[#E3D7C1] relative select-none flex items-center overflow-hidden">
+    <section className="w-full min-h-[94px] py-4 lg:py-0 bg-[#F7F2E7] border-b border-[#E3D7C1] relative flex items-center">
       {/* Background subtle ornamental linework pattern */}
       <div 
         className="absolute inset-0 opacity-[0.03] pointer-events-none bg-repeat"

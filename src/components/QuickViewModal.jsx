@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { X, Heart, ShoppingBag, ShieldCheck, Check, Sparkles } from 'lucide-react';
 
 export default function QuickViewModal({ 
@@ -9,10 +9,19 @@ export default function QuickViewModal({
   onToggleWishlist, 
   onAddToCart 
 }) {
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
+
   if (!isOpen || !product) return null;
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto select-none flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-50 overflow-y-auto flex items-center justify-center p-4">
       {/* Backdrop */}
       <div 
         className="fixed inset-0 bg-black/85 backdrop-blur-md transition-opacity"

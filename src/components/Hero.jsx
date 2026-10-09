@@ -43,7 +43,7 @@ export default function Hero({ onExploreClick, onHeritageClick }) {
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
-    <section className="relative w-full min-h-[360px] h-auto py-8 sm:py-0 sm:h-[360px] bg-[#0c0a07] overflow-hidden select-none border-b border-[#251d14]">
+    <section className="relative w-full min-h-[360px] h-auto py-8 sm:py-0 sm:h-[360px] bg-[#0c0a07] overflow-hidden border-b border-[#251d14]">
       {/* Background Cinematic Spiritual Still-Life */}
       <div 
         className="absolute inset-0 w-full h-full bg-cover bg-right lg:bg-center"

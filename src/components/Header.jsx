@@ -16,7 +16,7 @@ export default function Header({
   const [activeDropdown, setActiveDropdown] = useState(null);
 
   return (
-    <header className="w-full h-[88px] bg-[#070706] border-b border-[#C69A38]/25 z-40 relative select-none">
+    <header className="w-full h-[88px] bg-[#070706] border-b border-[#C69A38]/25 z-40 relative">
       <div className="max-w-[1536px] h-full mx-auto px-6 sm:px-10 lg:px-16 flex items-center justify-between">
         
         {/* LEFT BRAND AREA: x ≈ 65px, width ≈ 300px */}
@@ -89,7 +89,7 @@ export default function Header({
             onClick={onOpenSearch}
             className="hidden lg:flex items-center justify-between w-[228px] h-[37px] px-3.5 rounded-full bg-[#161411] border border-[#3A3327] hover:border-[#C69A38]/60 transition-colors cursor-pointer group"
           >
-            <span className="text-[12px] font-sans text-[#786F62] group-hover:text-[#A89D8B] transition-colors select-none">
+            <span className="text-[12px] font-sans text-[#786F62] group-hover:text-[#A89D8B] transition-colors">
               Search for products...
             </span>
             <Search size={15} className="text-[#8C806F] group-hover:text-[#E5BC5C] transition-colors" />

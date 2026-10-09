@@ -9,7 +9,7 @@ export default function FeaturedProducts({
   onQuickView
 }) {
   return (
-    <section id="featured-products" className="w-full bg-[#0A0806] border-t border-[#231A12] pt-6 pb-16 relative select-none">
+    <section id="featured-products" className="w-full bg-[#0A0806] border-t border-[#231A12] pt-6 pb-16 relative">
       {/* Background subtle cinematic architectural atmosphere */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#130E09] via-[#0A0806] to-[#060504] opacity-95 pointer-events-none" />
       <div className="absolute top-0 right-0 w-[420px] h-[420px] bg-[#C69A38]/5 rounded-full blur-3xl pointer-events-none" />

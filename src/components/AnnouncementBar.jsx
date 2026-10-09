@@ -10,7 +10,7 @@ const LotusIcon = ({ className = "h-[14px] w-auto" }) => (
 
 export default function AnnouncementBar({ onOpenModal }) {
   return (
-    <div className="w-full h-[34px] bg-[#28180a] border-b border-[#C69A38]/30 select-none flex items-center justify-between px-6 sm:px-12 md:px-16 z-50 relative">
+    <div className="w-full h-[34px] bg-[#28180a] border-b border-[#C69A38]/30 flex items-center justify-between px-6 sm:px-12 md:px-16 z-50 relative">
       {/* Left Lotus ornament */}
       <div className="hidden sm:flex items-center pl-1">
         <LotusIcon className="h-[14px] w-auto" />

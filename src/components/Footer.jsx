@@ -3,7 +3,7 @@ import { Mail, ArrowRight, ShieldCheck, Sparkles, Compass } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#070605] border-t border-[#2A2116] text-[#A69B88] font-sans text-[13px] pt-12 pb-8 select-none">
+    <footer className="w-full bg-[#070605] border-t border-[#2A2116] text-[#A69B88] font-sans text-[13px] pt-12 pb-8">
       <div className="max-w-[1536px] mx-auto px-6 sm:px-12 lg:px-16">
         
         {/* Top Trust Columns */}
