@@ -37,12 +37,12 @@ export const IMAGE_MANIFEST = {
       path: '/assets/hero_bg_2x.jpg',
       webpPath: '/assets/hero_bg_2x.webp',
       fallbackPath: '/assets/hero_bg.png',
-      naturalDimensions: { width: 3072, height: 724 },
-      aspectRatio: '4.24:1',
+      naturalDimensions: { width: 3840, height: 1500 },
+      aspectRatio: '2.56:1',
       displayLocation: 'Cinematic full-width homepage hero background',
-      altText: 'Sacred Vedic Still-Life: Himalayan Rudraksha beads, lit brass oil lamp, Sanskrit scriptures and temple lotus petals',
-      format: 'image/jpeg, image/webp',
-      compressionTarget: '< 290KB (WebP: 167KB)'
+      altText: 'UHD Sacred Vedic Still-Life: Lord Ganesha brass idol, lit diya oil lamp, Nepalese Rudraksha beads, sacred scriptures, and temple teakwood panels',
+      format: 'image/jpeg, image/webp, image/png',
+      compressionTarget: 'UHD Master 3840x1500 (WebP: 495KB, JPG: 1063KB)'
     }
   },
 
@@ -157,13 +157,13 @@ export const IMAGE_MANIFEST = {
       key: 'cat_spiritual_books',
       path: '/assets/categories/cat_9_spiritual_books.jpg',
       webpPath: '/assets/categories/cat_9_spiritual_books.webp',
-      naturalDimensions: { width: 1000, height: 840 },
+      naturalDimensions: { width: 1200, height: 1008 },
       aspectRatio: '1.19:1 (Card frame: 138x116px)',
       displayLocation: 'Category Section — Card 9',
       title: 'Spiritual Books',
-      altText: 'Historic illuminated manuscript copy of the sacred Bhagavad Gita in classical Devanagari script',
+      altText: 'Photorealistic stack of sacred Hindu scriptures: leather-bound Bhagavad Gita with gold-embossed mandala crest, cream linen Upanishads, Ramayana, and Mahabharata on dark teakwood table',
       format: 'image/jpeg, image/webp',
-      compressionTarget: '< 290KB (WebP: 207KB)'
+      compressionTarget: 'UHD Category 1200x1008 (WebP: < 150KB, JPG: < 250KB)'
     },
     {
       id: 10,
