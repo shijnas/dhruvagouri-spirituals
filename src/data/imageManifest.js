@@ -9,12 +9,12 @@ export const IMAGE_MANIFEST = {
     logoFull: {
       key: 'brand_logo_full',
       path: '/assets/logo_full.png',
-      naturalDimensions: { width: 600, height: 168 },
-      aspectRatio: '3.57:1',
+      naturalDimensions: { width: 620, height: 168 },
+      aspectRatio: '3.69:1',
       displayLocation: 'Header & Footer brand identity',
-      altText: 'DHRUVAGOURI SPIRITUALS - Authentic Indian Spiritual Traditions',
+      altText: 'DHRUVAGOURI SPIRITUALS - Authentic Indian Spiritual Traditions (with signature red bindi on the letter i)',
       format: 'image/png',
-      compressionTarget: '< 40KB (Lossless PNG)'
+      compressionTarget: '< 55KB (Lossless PNG)'
     },
     logoEmblem: {
       key: 'brand_logo_emblem',
