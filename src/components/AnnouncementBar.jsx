@@ -22,15 +22,15 @@ export default function AnnouncementBar({ onOpenModal }) {
         <span>Discover the timeless traditions of India.</span>
       </div>
 
-      {/* Right links and ornament */}
-      <div className="hidden sm:flex items-center space-x-3.5 font-serif text-[12px] sm:text-[12.5px] text-[#C4A053] pr-2">
+      {/* Right links and ornament exactly matching reference */}
+      <div className="hidden sm:flex items-center font-sans text-[11px] font-medium text-[#D4B56C] tracking-[0.01em] pr-1">
         <a href="#about" onClick={(e) => { e.preventDefault(); onOpenModal?.('About Us'); }} className="hover:text-[#F2D78C] transition-colors">About Us</a>
-        <span className="text-[#C69A38]/40">|</span>
+        <span className="mx-2.5 text-[#C69A38]/40 font-light text-[11px]">|</span>
         <a href="#contact" onClick={(e) => { e.preventDefault(); onOpenModal?.('Contact'); }} className="hover:text-[#F2D78C] transition-colors">Contact</a>
-        <span className="text-[#C69A38]/40">|</span>
+        <span className="mx-2.5 text-[#C69A38]/40 font-light text-[11px]">|</span>
         <a href="#help" onClick={(e) => { e.preventDefault(); onOpenModal?.('Help & FAQ'); }} className="hover:text-[#F2D78C] transition-colors">Help</a>
-        <span className="ml-1 flex items-center">
-          <LotusIcon className="h-[13px] w-auto" />
+        <span className="ml-4 flex items-center">
+          <LotusIcon className="h-[12px] w-auto" />
         </span>
       </div>
     </div>
